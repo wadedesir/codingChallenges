@@ -44,3 +44,15 @@ console.log(minMax([1,r,r * 15,4,5]));
 console.log(minMax([1,5]));
 console.log(minMax([5, 2334454]));
 console.log([r, r * 5, r, r * 10]);
+
+
+
+Summation
+
+var summation = function (num) {
+  let answer=0
+ for (let i=0;i<=num;i++ ){
+   answer=answer +i
+   }
+  return answer
+}
