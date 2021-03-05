@@ -123,3 +123,33 @@ solution('IV') //should be: 4)
 solution('MMVIII') //should be: 2008)
 solution('MDCLXVI') //should be: 1666)
  //
+
+//WIP
+ function sortArray(array) {
+   // Return a sorted array.
+   let oddEven = []
+   let oddArr = []
+
+   array.forEach( num => {
+     if ((num % 2 !== 0) && (oddArr.length > 0)){
+       if (oddArr[oddArr.length - 1] > num){
+               oddArr.forEach( odd => {
+         if
+       })
+         oddArr.splice(oddArr.length-1, 0, num)}//oddArr.unshift(num)}
+       else {oddArr.push(num)}
+     }
+     else if (num % 2 !== 0){
+       oddArr.push(num)
+     }
+   })
+   let index = 0
+   console.log(oddArr)
+   array.forEach( num => {
+     if (num % 2 === 0){ oddEven.push(num)}
+     else{oddEven.push(oddArr[index]); index += 1}
+   })
+
+
+   return oddEven
+ }
