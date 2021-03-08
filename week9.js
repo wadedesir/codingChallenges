@@ -28,29 +28,57 @@ Return "Battle Result: Good triumphs over Evil" if good wins, "Battle Result: Ev
 */
 function goodVsEvil(good, evil){
   good = good.split(' ')
-  evil = evil.split(' ') 
-  
+  evil = evil.split(' ')
+
   let goodVals = {1 : 1, 2: 2, 3 : 3, 4 : 3, 5 : 4, 6 : 10}
   let evilVals = {1 : 1, 2: 2, 3 : 2, 4 : 2, 5 : 3, 6 : 5, 7 : 10}
   let goodScore = 0
   let evilScore = 0
-  
+
   good.forEach( (raceCount, i) =>{
     i+=1
     for (let c = 0; c < raceCount; c++){
       goodScore += goodVals[i]
-    } 
-    
+    }
+
   })
   evil.forEach( (raceCount, i) =>{
     i+=1 //offset
     for (let c = 0; c < raceCount; c++){ //How many warriors?
       evilScore += evilVals[i] //Adds warrior value
-    }    
+    }
   })
-   
+
   return (goodScore > evilScore) ? "Battle Result: Good triumphs over Evil" : (goodScore < evilScore) ? "Battle Result: Evil eradicates all trace of Good" : "Battle Result: No victor on this battle field"
   //^ returns the winner based on the score of each sire
 }
 
   console.log(goodVsEvil('1 1 1 1 2 2', '1 1 1 1 1 1 1')) //good should win
+
+/*
+Use conditionals to return the proper message:
+
+case	return
+name equals owner	'Hello boss'
+otherwise	'Hello guest'
+*/
+  function greet (name, owner) {
+    // Add code here
+    return (name === owner) ? 'Hello boss' : 'Hello guest'
+  }
+
+console.log(greet('wade', 'wade'))
+
+/*
+Write a function that takes a string which has integers inside it separated by spaces, and your task is to convert each integer in the string into an integer and return their sum.
+
+Example
+summy("1 2 3")  ==> 6
+Good luck!
+*/
+
+function summy(stringOfInts){
+    return stringOfInts.split(' ').reduce((acc, item) => Number(item) + acc, 0) //... sum of ints found in string
+}
+
+console.log(summy('1, 3, 5')); //should be 9
