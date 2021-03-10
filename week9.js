@@ -82,3 +82,20 @@ function summy(stringOfInts){
 }
 
 console.log(summy('1, 3, 5')); //should be 9
+
+/*
+Task
+Given Positive integer, N , Return true if it could be expressed as a sum of two or more consecutive positive numbers , OtherWise return false .
+*/
+function consecutiveDucks(num) {
+  // your code here
+  while(num > 2){
+    if(num % 2 !== 0){
+    return true;
+  }
+   num = num / 2
+  }
+    return false
+}
+
+console.log(consecutiveDucks(69)) //should be true
