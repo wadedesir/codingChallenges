@@ -11,6 +11,21 @@ function parse( data )
 
 console.log(parse("iiisdoso")) //test should be: [ 8, 64 ]
 
+/*
+Input:
+The function will be given two parameters. Each parameter will be a string of multiple integers separated by a single space. Each string will contain the count of each race on the side of good and evil.
+
+The first parameter will contain the count of each race on the side of good in the following order:
+
+Hobbits, Men, Elves, Dwarves, Eagles, Wizards.
+The second parameter will contain the count of each race on the side of evil in the following order:
+
+Orcs, Men, Wargs, Goblins, Uruk Hai, Trolls, Wizards.
+All values are non-negative integers. The resulting sum of the worth for each side will not exceed the limit of a 32-bit integer.
+
+Output:
+Return "Battle Result: Good triumphs over Evil" if good wins, "Battle Result: Evil eradicates all trace of Good" if evil wins, or "Battle Result: No victor on this battle field" if it ends in a tie.
+*/
 function goodVsEvil(good, evil){
   good = good.split(' ')
   evil = evil.split(' ') 
@@ -36,5 +51,6 @@ function goodVsEvil(good, evil){
    
   return (goodScore > evilScore) ? "Battle Result: Good triumphs over Evil" : (goodScore < evilScore) ? "Battle Result: Evil eradicates all trace of Good" : "Battle Result: No victor on this battle field"
   //^ returns the winner based on the score of each sire
-  }
+}
 
+  console.log(goodVsEvil('1 1 1 1 1 2', '1 1 1 1 1 1 1')) //good should win
