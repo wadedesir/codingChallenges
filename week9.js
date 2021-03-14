@@ -53,4 +53,4 @@ function goodVsEvil(good, evil){
   //^ returns the winner based on the score of each sire
 }
 
-  console.log(goodVsEvil('1 1 1 1 1 2', '1 1 1 1 1 1 1')) //good should win
+  console.log(goodVsEvil('1 1 1 1 2 2', '1 1 1 1 1 1 1')) //good should win
