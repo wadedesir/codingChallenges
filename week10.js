@@ -28,3 +28,15 @@ function solution(number){
   return arr.filter(x => x % 3 === 0 || x % 5 === 0).reduce((a,b) => a+ b, 0)
 
 }
+
+/*
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+Example
+solution("camelCasing")  ==  "camel Casing"
+*/
+
+// complete the function
+function solution(string) {
+ return string.replace(/([a-z])([A-Z])/g, '$1 $2')
+}
