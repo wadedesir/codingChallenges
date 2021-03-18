@@ -40,3 +40,10 @@ solution("camelCasing")  ==  "camel Casing"
 function solution(string) {
  return string.replace(/([a-z])([A-Z])/g, '$1 $2')
 }
+
+
+function race(v1, v2, g) {
+  if(v1 > v2) return null;
+  let second = (g * 3600) /( v2 - v1);
+  return [Math.trunc(second / 3600), Math.trunc((second % 3600) / 60), Math.trunc(second % 60)]
+}
