@@ -47,3 +47,40 @@ function guessHatColor(a,b,c,d) {
 }
 
 console.log(guessHatColor("black","white","black","white")); // should be 2
+
+/*
+123 => [1,2,3]
+
+1 => [1]
+
+8675309 => [8,6,7,5,3,0,9]
+*/
+
+function digitize(n) {
+  return n.toString().split('').map( numStr => Number(numStr)) //string the input, split it and then turn them all to numbers again
+}
+
+
+/*
+Given a list of integers, determine whether the sum of its elements is odd or even.
+
+Give your answer as a string matching "odd" or "even".
+
+If the input array is empty consider it as: [0] (array with a zero).
+
+Examples:
+Input: [0]
+Output: "even"
+
+Input: [0, 1, 4]
+Output: "odd"
+*/
+function oddOrEven(array) {
+   //enter code here
+  let retVal = array.reduce((acc,num) =>{ //add all array values
+    acc += num
+    return acc
+  }, 0)
+
+  return (retVal % 2 === 0) ? "even" : "odd" // check if odd or even and return
+}
