@@ -84,3 +84,28 @@ function oddOrEven(array) {
 
   return (retVal % 2 === 0) ? "even" : "odd" // check if odd or even and return
 }
+
+/*
+Find the greatest common divisor of two positive integers. The integers can be large, so you need to find a clever solution.
+
+The inputs x and y are always greater or equal to 1, so the greatest common divisor will always be an integer that is also greater or equal to 1.
+*/
+function mygcd(x,y){
+  //your code here
+  let xArr = []
+  let yArr = []
+  for(let i = 1; i <= x; i++){
+    x % i === 0 ? xArr.push(i) : false
+  }
+  for(let i = 1; i <= y; i++){
+    y % i === 0 ? yArr.push(i) : false
+  }
+
+  return xArr.reduceRight( (acc, num) =>{
+    if (acc === 0){
+      yArr.includes(num) ? acc = num : false
+    }
+
+    return acc
+  }, 0)
+}
