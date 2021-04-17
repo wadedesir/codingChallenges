@@ -44,3 +44,17 @@ function disemvowel(str) {
   return Newstr;
 }
 
+/*
+Yor task is to write function factorial
+
+https://en.wikipedia.org/wiki/Factorial
+*/
+
+function factorial(n){
+  //your code here
+   let ret = 1
+   for(; n > 0; n-- ){
+     ret = ret * n
+   }
+   return ret
+ }
