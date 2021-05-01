@@ -32,20 +32,18 @@ function howManyDalmatians(number) {
 
 ////////////
 
-function getMax1()
-{
-  
-  var max = {
-   name: 'Max Headroom'
-  }
-  return max;
+function getMax1() {
+
+    var max = {
+        name: 'Max Headroom'
+    }
+    return max;
 }
 
-function getMax2()
-{
-  return{
-    name: 'Max Headroom'
-  }
+function getMax2() {
+    return {
+        name: 'Max Headroom'
+    }
 }
 
 /*
@@ -59,31 +57,32 @@ You should not modify the behavior of the sort function.
 var sorted = 0;
 
 function sort(array) {
-  // Mark function as called through the global variable
-  sorted = 1;
-  
-  // Transform the input data
-  for(var i = 0; i < array.length; i++) {
-    array[i] = 3 * array[i] + 2;
-  }
-  
-  // Remove middle value
-  var n = array.length, mid = Math.floor(n/2);
-  array = array.slice(0, mid).concat(array.slice(mid+1));
-  
-  // Sort the array
-  let sortedArr = false;
-  for(var i = array.length - 1; i >= 0 && ! sortedArr; i--) {
-    sortedArr = true;
-    for(var j = 0; j < i; j++) {
-      if ( array[j] > array[j+1] ) {
-        swap(array, j, j+1);
-        sortedArr = false;
-      }
+    // Mark function as called through the global variable
+    sorted = 1;
+
+    // Transform the input data
+    for (var i = 0; i < array.length; i++) {
+        array[i] = 3 * array[i] + 2;
     }
-  }
-  
-  return array;
+
+    // Remove middle value
+    var n = array.length,
+        mid = Math.floor(n / 2);
+    array = array.slice(0, mid).concat(array.slice(mid + 1));
+
+    // Sort the array
+    let sortedArr = false;
+    for (var i = array.length - 1; i >= 0 && !sortedArr; i--) {
+        sortedArr = true;
+        for (var j = 0; j < i; j++) {
+            if (array[j] > array[j + 1]) {
+                swap(array, j, j + 1);
+                sortedArr = false;
+            }
+        }
+    }
+
+    return array;
 }
 
 /*
@@ -98,21 +97,21 @@ Task
 Fix the bug so we can all go home early.
 */
 
-class Dinglemouse{
+class Dinglemouse {
 
-    constructor( firstName, lastName ){
-      this.firstName = firstName,
-      this.lastName = lastName
+    constructor(firstName, lastName) {
+        this.firstName = firstName,
+            this.lastName = lastName
     }
-    
-    getFullName(){
-      let retval = this.firstName+" "+this.lastName
-      return retval.trim()
-    }
-    
-  }
 
-  /*
+    getFullName() {
+        let retval = this.firstName + " " + this.lastName
+        return retval.trim()
+    }
+
+}
+
+/*
   The code is a recursive attempt in calculating the result of a factorial function.
 I.e. the result of 3! (Factorial of 3) is 3x2x1 = 6.
 In case of 0! the result is 1 and in case of a negative factorial the result should be 0.
@@ -120,12 +119,11 @@ In case of 0! the result is 1 and in case of a negative factorial the result sho
 The goal is to find the bugs in the sourcecode and fix them (play a little pest control).
 */
 
-  function facRecursion(value){
-    if(value < 0){
-      return 0;
-      }
-    else if(value == 1 || value == 0){
-      return 1;
+function facRecursion(value) {
+    if (value < 0) {
+        return 0;
+    } else if (value == 1 || value == 0) {
+        return 1;
     }
     return facRecursion(value - 1) * value;
-  }
+}
