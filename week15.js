@@ -27,3 +27,42 @@ function arrayMadness(a, b) {
   
     return sumA > sumB
   }
+
+/*
+LEETCODE
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+*/
+  let retArr = []
+  var twoSum = function(nums, target) {
+      nums.forEach( (num, i1) => {
+          nums.forEach( (num2, i2) =>{
+              if (num + num2 === target && i1 != i2){
+                  retArr[0] = i2
+                  retArr[1] = i1
+              }
+          })
+      })
+      
+      return retArr
+  };
+
+/*
+Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+
+Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+*/
+
+  var reverse = function(x) {
+    if (Math.abs(x) > (2**30)) { return 0}
+      if(Math.sign(x) === -1){ //check if negative
+    x = x.toString().split('').reverse() //to string array and reverse
+    x.pop()//remove last n which is negative
+    return Number(x.join('')) * -1 //return negative reversed n
+  }else{
+    return Number(x.toString().split('').reverse().join('')) //convert to str array, reverse then convert back
+  }
+};
