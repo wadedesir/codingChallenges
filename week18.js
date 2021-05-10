@@ -80,3 +80,13 @@ class Dinglemouse {
 
     let dm = new Dinglemouse().setName("Bob").setAge(27).setSex('M')
     let expected = "Hello. My name is Bob. I am 27. I am male."
+
+/*
+Failed Sort - Bug Fixing #4
+Oh no, Timmy's Sort doesn't seem to be working? Your task is to fix the sortArray function to sort all numbers in ascending order
+*/
+
+var sortArray = function(value) {
+    return value.split('').sort((a, b) => a - b ).join('');
+}
+
