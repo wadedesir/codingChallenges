@@ -113,3 +113,26 @@ class Character{
     }
     
   }
+
+function automaton(e) {
+	if (typeof e === "string") {
+    let count = 0
+    e.split('').reduce( (acc, letter) => {
+      const vowels = ['a', 'e', 'i', 'y', 'u', 'o']
+      vowels.includes(letter.toLowerCase()) ? count += 1 : false
+    })
+		return count
+	} else if (typeof e === "number") {
+		if (e == 1) return false;
+
+		for (var i = 2; i < e; i++) if (e % i < 1) return false;
+
+		return true;
+	} else if (typeof e === "object") {
+		var a = {};
+
+		for (var k in e) a[e[k]] = k + "";
+
+		return a;
+	}
+}
