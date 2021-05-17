@@ -114,14 +114,17 @@ class Character{
     
   }
 
-function automaton(e) {
+  function automaton(e) {
 	if (typeof e === "string") {
-    let count = 0
-    e.split('').reduce( (acc, letter) => {
-      const vowels = ['a', 'e', 'i', 'y', 'u', 'o']
-      vowels.includes(letter.toLowerCase()) ? count += 1 : false
-    })
-		return count
+
+    if(e.length > 0){
+    return e.split('').reduce( (acc, letter) => {
+      const vowels = ['a', 'e', 'i', 'u', 'o']
+      vowels.includes(letter.toLowerCase()) ? acc += 1 : false
+      return acc
+    }, 0)
+    }
+		return 0
 	} else if (typeof e === "number") {
 		if (e == 1) return false;
 
