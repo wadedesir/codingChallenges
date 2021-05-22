@@ -114,7 +114,7 @@ class Character{
     
   }
 
-  function automaton(e) {
+function automaton(e) {
 	if (typeof e === "string") {
 
     if(e.length > 0){
